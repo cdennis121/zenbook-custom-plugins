@@ -5,6 +5,7 @@ out/
 *.out
 *.err
 logs-host.*
+.gh-auth*
 .DS_Store
 Thumbs.db
 .env
