@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' file:; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data: file:; frame-src 'self' file:;"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Duo Plugin Container</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="chrome">
+      <div class="brand">
+        <span class="mark">Duo</span>
+        <span class="plugin-name" id="pluginName">Home</span>
+      </div>
+      <div class="meta">
+        <span id="fgLabel" class="fg" title="Foreground app">—</span>
+        <button type="button" id="btnReload" title="Reload plugins">Reload</button>
+        <button type="button" id="btnRetarget" title="Retarget ScreenPad display">Display</button>
+      </div>
+    </header>
+    <main class="stage">
+      <iframe id="pluginFrame" title="Active plugin" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+      <div id="empty" class="empty hidden">
+        <p>No plugin matched. Showing home.</p>
+      </div>
+    </main>
+    <script src="host.js"></script>
+  </body>
+</html>

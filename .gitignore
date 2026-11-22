@@ -1,0 +1,16 @@
+node_modules/
+dist/
+out/
+*.log
+*.out
+*.err
+logs-host.*
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+
+# Local machine overrides (copy from config.example.json)
+# Keep a committed safe default config.json; ignore local-only override if present:
+config.local.json

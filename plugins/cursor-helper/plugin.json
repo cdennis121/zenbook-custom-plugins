@@ -1,0 +1,11 @@
+{
+  "id": "cursor-helper",
+  "name": "Cursor",
+  "description": "Workspace, git branch, and recent folders when Cursor is focused.",
+  "priority": 20,
+  "match": {
+    "processNames": ["cursor.exe"],
+    "titlePatterns": ["(?i)cursor"]
+  },
+  "entry": "index.html"
+}

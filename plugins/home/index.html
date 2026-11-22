@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <style>
+      :root {
+        --text: #e8eef5;
+        --muted: #8b9aab;
+        --line: #2a3441;
+        --accent: #3d9cf0;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        height: 100%;
+        font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 280px at 10% -40%, #1b3a57 0%, transparent 55%),
+          radial-gradient(900px 240px at 90% 120%, #243044 0%, transparent 50%),
+          #0f1419;
+      }
+      body {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+        padding: 14px 24px;
+        gap: 28px;
+      }
+      h1 { margin: 0 0 6px; font-size: 22px; font-weight: 650; }
+      p { margin: 0; color: var(--muted); font-size: 13px; max-width: 48ch; line-height: 1.45; }
+      .apps {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .app {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        min-height: 40px;
+        padding: 8px 12px;
+        font-size: 12px;
+        color: var(--text);
+        background: rgba(255,255,255,0.03);
+      }
+      .panel {
+        border-left: 1px solid var(--line);
+        padding-left: 24px;
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      code { color: var(--accent); font-family: ui-monospace, Consolas, monospace; font-size: 11px; }
+      #fg { margin-top: 10px; color: var(--text); font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Duo Plugin Container</h1>
+      <p>Focus Cursor, Chrome, or Bambu Studio to swap this ScreenPad panel. Otherwise you stay on Home.</p>
+      <div class="apps">
+        <div class="app">Cursor — workspace + git</div>
+        <div class="app">Chrome — tab + bookmarks</div>
+        <div class="app">Bambu — printers (Studio)</div>
+      </div>
+      <div id="fg">Waiting for foreground app…</div>
+    </div>
+      <div class="panel">
+      <div>Repo: <code>zenbook-custom-plugins</code></div>
+      <div>Add plugins under <code>plugins/</code></div>
+      <div>API: <code>docs/plugin-api.md</code></div>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>

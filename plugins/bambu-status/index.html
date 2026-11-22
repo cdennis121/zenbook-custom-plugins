@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bambu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="col">
+      <div class="eyebrow" id="appEyebrow">Bambu</div>
+      <h1 id="headline">Printers</h1>
+      <p id="sub" class="muted">Reading local Studio config…</p>
+      <div class="actions">
+        <button type="button" id="btnOpen">Open app</button>
+        <button type="button" id="btnStudio">Open Studio</button>
+        <button type="button" data-url="https://wiki.bambulab.com/en/software/bambu-studio">Wiki</button>
+      </div>
+    </section>
+
+    <section class="col printers">
+      <div class="section-label">Known devices (local)</div>
+      <div id="printerList" class="cards"></div>
+      <div class="status-shell">
+        <div class="section-label">Live job status</div>
+        <div class="shell-box">
+          <strong>Not connected</strong>
+          <p id="blockerText">
+            Live percent / stage needs Bambu LAN MQTT (or cloud) using the printer access code from Studio.
+            This plugin never shows or copies access codes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="plugin.js"></script>
+  </body>
+</html>

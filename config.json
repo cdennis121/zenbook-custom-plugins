@@ -1,0 +1,19 @@
+{
+  "display": {
+    "preferScreenPad": true,
+    "fallbackIndex": 1,
+    "forceIndex": null,
+    "matchHints": {
+      "minAspectRatio": 2.0,
+      "preferBottommost": true
+    }
+  },
+  "window": {
+    "frameless": true,
+    "alwaysOnTop": false,
+    "resizable": false,
+    "fullscreen": true
+  },
+  "foregroundPollMs": 500,
+  "defaultPluginId": "home"
+}

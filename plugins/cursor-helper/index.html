@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cursor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="col identity">
+      <div class="eyebrow">Cursor · <span id="stackTags">—</span></div>
+      <h1 id="workspace">Workspace</h1>
+      <p id="fileLine" class="muted">Waiting…</p>
+      <div class="git-row">
+        <span class="pill" id="branch">branch —</span>
+        <span class="pill subtle" id="changes">changes —</span>
+      </div>
+      <div class="actions" id="pathActions">
+        <button type="button" id="btnCopyPath" disabled>Copy path</button>
+        <button type="button" id="btnReveal" disabled>Reveal</button>
+        <button type="button" id="btnOpenFolder" disabled>Open folder</button>
+      </div>
+    </section>
+
+    <section class="col workflow">
+      <div class="section-label">Workflow</div>
+      <div id="shortcutRow" class="chip-row"></div>
+      <div class="section-label scripts-label" id="scriptsHeading">npm scripts</div>
+      <div id="scriptRow" class="chip-row"></div>
+      <div class="section-label scripts-label" id="filesHeading">Files</div>
+      <div id="fileRow" class="chip-row"></div>
+      <p id="statusNote" class="note"></p>
+    </section>
+
+    <section class="col recent">
+      <div class="section-label">Recent</div>
+      <div id="recentList" class="chip-row"></div>
+    </section>
+
+    <script src="plugin.js"></script>
+  </body>
+</html>

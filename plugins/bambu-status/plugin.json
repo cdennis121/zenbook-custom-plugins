@@ -1,0 +1,20 @@
+{
+  "id": "bambu-status",
+  "name": "Bambu",
+  "description": "Bambu Studio companion — known printers from local config; live status needs LAN/MQTT next.",
+  "priority": 18,
+  "match": {
+    "processNames": [
+      "bambu-studio.exe",
+      "bambustudio.exe",
+      "bambu studio.exe",
+      "bambu-handy.exe",
+      "bambuhandy.exe"
+    ],
+    "titlePatterns": [
+      "(?i).*bambu studio.*",
+      "(?i).*bambu handy.*"
+    ]
+  },
+  "entry": "index.html"
+}

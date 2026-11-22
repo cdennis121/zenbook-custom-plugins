@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Plugin</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        background: #121820;
+        color: #e8eef5;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Plugin</h1>
+    <script>
+      // Ask the host for foreground app state
+      window.parent.postMessage({ type: 'duo:getState' }, '*');
+      window.addEventListener('message', (e) => {
+        if (e.data?.type === 'duo:state') {
+          console.log('foreground', e.data.state.foreground);
+        }
+      });
+    </script>
+  </body>
+</html>

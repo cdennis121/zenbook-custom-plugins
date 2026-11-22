@@ -1,0 +1,146 @@
+:root {
+  --text: #f3f1ec;
+  --muted: #a39e94;
+  --line: #3a342c;
+  --accent: #e2a35a;
+  --bg: #14110e;
+  --ok: #6fbf7a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  color: var(--text);
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(800px 240px at 100% 0%, rgba(226, 163, 90, 0.16), transparent 50%),
+    linear-gradient(180deg, #1b1713, var(--bg));
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(340px, 1.35fr);
+  gap: 16px;
+  padding: 12px 20px;
+  align-items: stretch;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 4px 0 6px;
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.muted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 42ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-radius: 10px;
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: 13px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:hover {
+  border-color: var(--accent);
+  background: rgba(226, 163, 90, 0.12);
+}
+
+.printers {
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-width: 160px;
+  min-height: 64px;
+}
+
+.card .id {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card .meta {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.shell-box {
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.shell-box strong {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.shell-box p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  body { grid-template-columns: 1fr; }
+  .printers {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}

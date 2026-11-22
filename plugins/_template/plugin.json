@@ -1,0 +1,11 @@
+{
+  "id": "my-plugin",
+  "name": "My Plugin",
+  "description": "Copy this folder, rename it, and edit match rules.",
+  "priority": 5,
+  "match": {
+    "processNames": ["notepad.exe"],
+    "titlePatterns": ["(?i).*notepad.*"]
+  },
+  "entry": "index.html"
+}

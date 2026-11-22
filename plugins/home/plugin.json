@@ -1,0 +1,8 @@
+{
+  "id": "home",
+  "name": "Home",
+  "description": "Default empty/home state when no app-specific plugin matches.",
+  "priority": -100,
+  "match": {},
+  "entry": "index.html"
+}

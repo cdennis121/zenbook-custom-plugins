@@ -1,0 +1,11 @@
+{
+  "id": "chrome-companion",
+  "name": "Chrome",
+  "description": "Current tab title, bookmark-bar strip, and Chrome page shortcuts.",
+  "priority": 15,
+  "match": {
+    "processNames": ["chrome.exe"],
+    "titlePatterns": ["(?i).*google chrome$"]
+  },
+  "entry": "index.html"
+}
